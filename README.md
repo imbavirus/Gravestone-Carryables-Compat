@@ -1,25 +1,39 @@
+# Gravestone Carryables Compat
 
-Installation information
-=======
+Local fork/expansion of [Corpse-Gravestone-Curios-Compat](https://github.com/Leclowndu93150/Corpse-Gravestone-Curios-Compat) (Leclowndu93150).
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Restores equipped **carryables** into the slots they came from when you break a Max Henkel **Gravestone**:
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+- **Curios** (rings, hands, back, etc.)
+- **Accessories** (Aether gloves, rings, capes, …)
+- **Vanilla** main inventory, armor, offhand (same indices)
+- **Full `ItemStack` data** — backpack contents (e.g. Sophisticated Backpacks components), enchants, custom NBT/components, modules, etc. are kept because stacks are copied, not rebuilt
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## Status
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+- Local only under `git/infernos/minecraft-mods/Gravestone-Carryables-Compat`
+- **No GitHub fork/push** (upstream remote is fetch-only)
+- Not published; not in the Infernos pack yet
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Build
+
+```bat
+gradlew.bat build
+```
+
+Jar: `build/libs/gravestonecarryables-1.21.1-NeoForge-1.0.0.jar`
+
+## Config (`gravestonecarryables-common.toml`)
+
+| Key | Default | Meaning |
+|-----|---------|---------|
+| `blacklisted_items` | `[]` | Item ids never auto-restored to equipment |
+| `transfer_cursed_items` | `false` | Allow Curse of Binding gear back into slots |
+| `restore_curios` | `true` | Curios re-equip |
+| `restore_accessories` | `true` | Accessories re-equip |
+| `restore_vanilla_slots` | `true` | Same-slot inventory/armor/offhand |
+
+## Credits
+
+- Original Curios + Gravestone approach: **Leclowndu93150**
+- Carryables rename + Accessories / multi-system expansion: **Infernos**

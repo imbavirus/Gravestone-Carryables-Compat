@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.leclowndu93150.corpsecurioscompat.mixin",
+  "package": "com.infernos.gravestonecarryables.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "GraveStoneBlockMixin"
