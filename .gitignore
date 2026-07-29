@@ -29,3 +29,6 @@ build/
 run/
 out/
 
+
+.env
+
