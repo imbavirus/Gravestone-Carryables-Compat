@@ -1,13 +1,16 @@
 modLoader="javafml"
 loaderVersion="${loader_version_range}"
 license="${mod_license}"
+#issueTrackerURL="https://github.com/imbavirus/Gravestone-Carryables-Compat/issues"
 
 [[mods]]
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
 authors="${mod_authors}"
+credits="Original Gravestone x Curios approach by Leclowndu93150 (Corpse-Gravestone-Curios-Compat / Gravestone x Curios API Compat). Expanded for Accessories and full-stack carryables by Infernos. Gravestone by Max Henkel."
 description='''${mod_description}'''
+displayURL="https://github.com/imbavirus/Gravestone-Carryables-Compat"
 
 [[mixins]]
 config="${mod_id}.mixins.json"
@@ -40,7 +43,6 @@ versionRange="[1.0.0,)"
 ordering="NONE"
 side="BOTH"
 
-# Soft deps — restore handlers load only when present
 [[dependencies.${mod_id}]]
 modId="curios"
 type="optional"

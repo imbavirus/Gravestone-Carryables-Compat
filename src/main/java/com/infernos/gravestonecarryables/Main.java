@@ -16,8 +16,10 @@ public class Main {
         Config.register(modContainer);
         CarrySlotDataComponent.DATA_COMPONENTS.register(modEventBus);
 
-        LOGGER.info("Gravestone Carryables Compat loaded (curios={}, accessories={})",
+        LOGGER.info(
+                "Gravestone Carryables ready (curios={}, accessories={}). Based on Leclowndu93150's Gravestone x Curios compat.",
                 ModList.get().isLoaded("curios"),
-                ModList.get().isLoaded("accessories"));
+                ModList.get().isLoaded("accessories")
+        );
     }
 }

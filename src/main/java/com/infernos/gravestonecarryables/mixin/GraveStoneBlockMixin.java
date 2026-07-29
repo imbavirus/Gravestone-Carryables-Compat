@@ -20,7 +20,7 @@ import java.util.List;
 public abstract class GraveStoneBlockMixin {
 
     /**
-     * @author Infernos / Leclowndu93150
+     * @author Infernos, based on Leclowndu93150 (Gravestone x Curios API Compat)
      * @reason Restore Curios, Accessories, and vanilla slots with full stack data (backpacks, enchants, modules).
      */
     @Overwrite(remap = false)
